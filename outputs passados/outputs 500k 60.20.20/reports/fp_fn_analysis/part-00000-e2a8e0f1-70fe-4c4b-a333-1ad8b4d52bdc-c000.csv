@@ -1,0 +1,4 @@
+tipo_erro,count,avg_fare,avg_distance,pct_total
+Acerto,39324,10.21,2.02,68.57
+Falso Negativo,16916,8.95,1.8,29.50
+Falso Positivo,1111,10.24,2.02,1.94

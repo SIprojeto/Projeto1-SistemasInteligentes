@@ -1,0 +1,6 @@
+{
+  "metodo": "percentil_75",
+  "coluna": "tip_amount",
+  "filtro": "tip_amount > 0",
+  "limiar_usd": 2.56
+}

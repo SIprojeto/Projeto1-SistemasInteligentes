@@ -1,0 +1,4 @@
+Arquitectura,Descricao,Epocas,Val_Loss_Final,Accuracy,Precision,Recall,F1-score,AUC-ROC
+A1,"Simples (64-32, sem BatchNorm, Dropout=0.2)",24,0.3804,0.8541,0.6686,0.8419,0.7453,0.9044
+A2,"Media (128-64-32, BatchNorm, Dropout=0.3)",11,0.3878,0.8439,0.6447,0.8563,0.7356,0.9036
+A3,"Profunda (256-128-64-32, BatchNorm, Dropout=0.3/0.4)",14,0.3825,0.8536,0.6676,0.8417,0.7446,0.9042

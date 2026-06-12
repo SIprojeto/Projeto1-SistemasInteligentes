@@ -1,0 +1,3 @@
+Modelo,Classe,Precision,Recall,F1,Support
+random_forest,0,0.9419,0.867,0.9029,42874
+random_forest,1,0.6764,0.8386,0.7488,14213

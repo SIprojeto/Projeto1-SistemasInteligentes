@@ -1,0 +1,10 @@
+Variável,Tipo,Média,Mediana,Moda,Mín,Máx,Desvio P.
+fare_amount,Quant.,9.82,9.0,6.5,2.5,26.5,4.332
+tip_amount,Quant.,2.007,1.86,1.0,0.0,5.9,1.037
+trip_distance,Quant.,1.948,1.6,0.9,0.01,6.27,1.271
+trip_duration_min,Quant.,11.351,10.15,7.683,0.517,33.983,6.364
+passenger_count,Quant.,1.64,1.0,1.0,1.0,6.0,1.306
+avg_speed,Quant.,10.765,10.105,9.0,0.033,452.308,4.508
+pickup_hour,Quant.,13.815,15.0,19.0,0.0,23.0,6.379
+tip_given,Qualit.,0.965,1.0,1.0,0.0,1.0,0.183
+tip_high,Qualit.,0.252,0.0,0.0,0.0,1.0,0.434

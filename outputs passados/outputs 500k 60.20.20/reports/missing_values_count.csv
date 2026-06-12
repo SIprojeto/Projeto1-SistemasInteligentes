@@ -1,0 +1,13 @@
+,missing_count
+trip_distance,0
+fare_amount,0
+tip_amount,0
+trip_duration_min,0
+avg_speed,528
+passenger_count,0
+payment_type,0
+RatecodeID,0
+VendorID,0
+tpep_pickup_datetime,0
+tpep_dropoff_datetime,0
+store_and_fwd_flag,0

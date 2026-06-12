@@ -1,0 +1,13 @@
+# Ignora ficheiros desnecessários na imagem Docker
+__pycache__/
+*.py[cod]
+*.egg-info/
+.git/
+.gitignore
+*.md
+outputs/
+data/*.csv
+relatorio/
+.DS_Store
+*.ipynb
+*.log

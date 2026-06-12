@@ -1,0 +1,4 @@
+Modelo,Silhueta_Treino,Silhueta_Teste,Davies_Bouldin,Clusters,Ruído_%,Clusters_Teste,Limiar_P95,Taxa_Anomalia_%,n_anomalias
+KMeans,0.2609,0.2599,1.5955,,,,,,
+DBSCAN,,,,123.0,3.5%,113.0,,,
+Autoencoder,,,,,,,0.0447,5.0%,4312.0

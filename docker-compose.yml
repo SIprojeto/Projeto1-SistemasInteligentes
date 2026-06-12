@@ -1,0 +1,42 @@
+# ─────────────────────────────────────────────────────────────
+#  docker-compose.yml — ambiente Docker do projeto
+#
+#  Primeira vez (construir imagem + pipeline completo):
+#    docker compose up --build
+#
+#  Uma fase ou comando à parte:
+#    docker compose run --rm pipeline python main.py --fase 2 --skip-check
+# ─────────────────────────────────────────────────────────────
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: taxi-tip-pipeline:dev
+    container_name: taxi-tip-pipeline
+
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+      - ./src:/app/src
+      - ./main.py:/app/main.py
+
+    ports:
+      - "4040:4040"
+
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=python3
+      - LOG_LEVEL=DEBUG
+      - JAVA_TOOL_OPTIONS=-Xmx5g -XX:+UseG1GC -XX:G1HeapRegionSize=4m
+      - SKIP_IF_READY=${SKIP_IF_READY:-0}
+      - FAST_TUNING=${FAST_TUNING:-0}
+
+    deploy:
+      resources:
+        limits:
+          memory: 8g
+
+    command: ["python", "main.py", "--skip-check"]
+    restart: "no"

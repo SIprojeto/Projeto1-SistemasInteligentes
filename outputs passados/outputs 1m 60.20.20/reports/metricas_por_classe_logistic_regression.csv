@@ -1,0 +1,3 @@
+Modelo,Classe,Precision,Recall,F1,Support
+logistic_regression,0,0.9427,0.856,0.8972,85837
+logistic_regression,1,0.6627,0.8447,0.7427,28760

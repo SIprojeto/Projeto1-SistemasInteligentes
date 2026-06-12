@@ -1,0 +1,1 @@
+Threshold recomendado: 0.2446 (recall_pos=1.0000, precision_pos=0.9664, f1_pos=0.9829, custo_medio=0.0336)

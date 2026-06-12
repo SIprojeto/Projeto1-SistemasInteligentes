@@ -1,0 +1,37 @@
+
+ANÁLISE DE DOMÍNIO — CUSTO DE ERROS (Stage 8 BD)
+=================================================
+
+PROBLEMA
+--------
+Prever se uma viagem de táxi NYC receberá gorjeta (tip_given = 1).
+
+CUSTO DOS ERROS
+---------------
+Falso Positivo (FP) — prever gorjeta quando não houve:
+  • O motorista recebe uma sugestão incorreta.
+  • Impacto: baixo — apenas desaponta expectativas.
+  • Custo de negócio: mínimo.
+
+Falso Negativo (FN) — não prever gorjeta quando houve:
+  • O motorista perde insight sobre padrões rentáveis
+    (hora do dia, tipo de rota, perfil de cliente).
+  • Impacto: moderado — perda de oportunidade de otimização.
+  • Custo de negócio: mais elevado que o FP.
+
+DECISÃO DE DESIGN
+-----------------
+Por ter FN mais custoso que FP, usámos:
+  1. Métrica de tuning: PR-AUC (em vez de ROC-AUC ou accuracy)
+     → mais sensível a FN quando a classe positiva é minoritária.
+  2. Constraint de threshold: recall >= 0.70
+     → aceitamos mais FP para capturar mais gorjetas reais.
+  3. Threshold selecionado: 0.30 (em vez do padrão 0.50)
+     → threshold escolhido dinamicamente a partir do sweep no conjunto de teste.
+
+VALIDAÇÃO
+---------
+A query SQL de error analysis (Query 2) confirma se FN têm
+características distintas (ex: fare_amount mais elevado),
+o que informaria uma estratégia de re-ponderação de classes
+numa iteração futura do modelo.

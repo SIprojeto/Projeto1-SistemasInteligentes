@@ -1,0 +1,35 @@
+{
+  "deep_mlp_clf": {
+    "accuracy": 0.5812453139439592,
+    "precision": 0.9725268104590915,
+    "recall": 0.5828699357261501,
+    "f1": 0.7288900930190554,
+    "auc": 0.5832785200286326
+  },
+  "deep_mlp_clf_tip_high": {
+    "accuracy": 0.8570382382172935,
+    "precision": 0.6755934266585514,
+    "recall": 0.8394060222741647,
+    "f1": 0.7486434286765382,
+    "auc": 0.9045102653207215
+  },
+  "deep_mlp_reg": {
+    "rmse": 0.6587070701005887,
+    "mae": 0.4408205340583892,
+    "r2": 0.5473171475653172
+  },
+  "autoencoder": {
+    "reconstruction_threshold": 0.2129062931927175,
+    "anomaly_rate": 0.05000784641941727
+  },
+  "unsupervised_classifiers": {
+    "kmeans": {
+      "silhouette_train": 0.26072368539340945,
+      "silhouette_test": 0.26150397818536725
+    },
+    "dbscan": {
+      "clusters_train": 118,
+      "noise_pct": 7.582621140163078
+    }
+  }
+}
