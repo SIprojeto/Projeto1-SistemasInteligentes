@@ -1,5 +1,7 @@
 # Projeto SI + Big Data — NYC Yellow Taxi Tip Prediction
 
+**Nota: Estão em os ficheiros /outputs 2m 60.20.20 e weka/randomForest model por causa destes ficheiros excederem o limite de tamanho de upload do github, os mesmos foram enviados no email do docente**
+
 ## Estrutura do Projeto
 
 ```
